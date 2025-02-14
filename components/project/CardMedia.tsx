@@ -5,7 +5,7 @@ const isVideo = (url: string) => {
 };
 
 const mediaStyle =
-  "object-cover w-full h-auto rounded-b-xl group-hover:scale-95 transition-transform duration-300";
+  "object-cover w-full h-auto rounded-b-md group-hover:scale-95 transition-transform duration-300";
 const CardMedia = ({ media, alt }: { media: string; alt: string }) => {
   return (
     <div className="relative w-full overflow-hidden">
@@ -28,7 +28,7 @@ const CardMedia = ({ media, alt }: { media: string; alt: string }) => {
           className={mediaStyle}
         />
       )}
-      <div className="absolute inset-0 bg-black/5 group-hover:scale-95 transition-transform duration-300 rounded-b-xl rounded-t-none"></div>
+      <div className="absolute inset-0 bg-black/5 group-hover:scale-95 transition-transform duration-300 rounded-b-md rounded-t-none"></div>
     </div>
   );
 };

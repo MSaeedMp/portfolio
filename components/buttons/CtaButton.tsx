@@ -16,7 +16,7 @@ const CtaButton = ({
         className
       )}
     >
-      <div className="flex justify-center items-center gap-2 bg-slate-900 rounded-lg w-full py-[11px] px-4">
+      <div className="flex justify-center items-center gap-2 bg-slate-950 hover:bg-slate-900 rounded-lg w-full py-[11px] px-4">
         {label}
         <ArrowRight className="group-hover:rotate-45 transition duration-200" />
       </div>

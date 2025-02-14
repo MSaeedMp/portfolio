@@ -212,6 +212,18 @@ export const projectsContent = {
   ],
 };
 
+export const certificateContent = {
+  heading: "Certificates",
+  subHeading: "Internationally valid certificates",
+  certificates: [
+    {
+      title: "",
+      subtitle: "",
+      description: "",
+    },
+  ],
+};
+
 export const heroIntro = {
   heading: "Dr.-Ing. M. Saeed Mafipour",
   subHeading:
@@ -237,7 +249,7 @@ export const socialMediaLinks = [
 ];
 
 export const buttonLables = {
-  cta: "Contact me",
+  cta: "Contact Me",
   demo: "Live Demo",
-  src: "Source code",
+  src: "Source Code",
 };

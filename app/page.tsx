@@ -1,6 +1,8 @@
 import About from "@/components/about/About";
 import TechList from "@/components/about/TechList";
 import CtaButton from "@/components/buttons/CtaButton";
+import Certificate from "@/components/certificate/Certificate";
+import CertificateList from "@/components/certificate/CertificateList";
 import MarkedText from "@/components/global/MarkedText";
 import Hero from "@/components/hero/Hero";
 import HeroIntro from "@/components/hero/HeroIntro";
@@ -17,6 +19,7 @@ import ProjectList from "@/components/project/ProjectList";
 import {
   aboutContent,
   buttonLables,
+  certificateContent,
   heroIntro,
   projectsContent,
 } from "@/util/constants";
@@ -38,7 +41,7 @@ const HomePage = () => {
         </Hero>
       </section>
 
-      <section className="pt-14 pb-20 relative" id="about">
+      <section className="pt-28 pb-20 relative" id="about">
         <About>
           <SectionHeading>
             <SectionMainHeading heading={aboutContent.heading} />
@@ -49,15 +52,25 @@ const HomePage = () => {
         </About>
       </section>
 
-      <section className="pt-14 relative" id="projects">
+      <section className="pt-28 pb-20 relative" id="projects">
         <Project>
           <SectionHeading>
             <SectionMainHeading heading={projectsContent.heading} />
             <SectionSubHeading heading={projectsContent.subHeading} />
           </SectionHeading>
           <ProjectList />
-          <div className="h-[500px]"></div>
         </Project>
+      </section>
+
+      <section className="pt-28 relative" id="certificates">
+        <Certificate>
+          <SectionHeading>
+            <SectionMainHeading heading={certificateContent.heading} />
+            <SectionSubHeading heading={certificateContent.subHeading} />
+          </SectionHeading>
+          <CertificateList />
+          <div className="h-[500px]"></div>
+        </Certificate>
       </section>
     </main>
   );
