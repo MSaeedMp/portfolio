@@ -1,3 +1,5 @@
+import { FaGithub, FaGoogleScholar, FaLinkedin } from "react-icons/fa6";
+
 export const navigationLinks = [
   {
     name: "About",
@@ -8,13 +10,12 @@ export const navigationLinks = [
     href: "/#projects",
   },
   {
-    name: "Research",
-    href: "/#research",
-  },
-
-  {
     name: "Certificates",
     href: "/#certificates",
+  },
+  {
+    name: "Research",
+    href: "/#research",
   },
   {
     name: "Awards",
@@ -130,13 +131,92 @@ export const aboutContent = {
   ],
 };
 
+export const projectsContent = {
+  heading: "Projects",
+  subHeading: "Selected works and projects ",
+  projects: [
+    {
+      title: "Next Cabin",
+      subtitle: "Technologies",
+      githubLink: "",
+      demoLink: "https://next-cabin-app.vercel.app/",
+      description:
+        "An e-commerce app for reserving cabins, featuring a user dashboard, geolocation, complex filtering and search system, secure authentication, and more.",
+      media: "/next-cabin.png",
+      technologies: [
+        "Next.js",
+        "Tailwind CSS",
+        "Zod",
+        "React Hook Form",
+        "Leaflet",
+        "Shadcn",
+        "TypeScript",
+        "NextAuth",
+        "Supabase",
+        "PostgreSQL",
+        "Prisma",
+        "Vercel",
+        "Git",
+        "GitHub",
+      ],
+    },
+    {
+      title: "Next Store",
+      subtitle: "Technologies",
+      githubLink: "",
+      demoLink: "https://next-store-app-pi.vercel.app/",
+      description:
+        "An e-commerce platform for purchasing products, featuring an admin dashboard, seamless payments, secure authentication, and more.",
+      media: "/next-store.png",
+      technologies: [
+        "Next.js",
+        "Tailwind CSS",
+        "Framer Motion",
+        "Zod",
+        "React Hook Form",
+        "Stripe",
+        "Shadcn",
+        "TypeScript",
+        "NextAuth",
+        "Supabase",
+        "PostgreSQL",
+        "Prisma",
+        "Vercel",
+        "Git",
+        "GitHub",
+      ],
+    },
+    {
+      title: "Next Robot",
+      subtitle: "Technologies",
+      githubLink: "",
+      demoLink: "https://next-robot-app.vercel.app/",
+      description:
+        "An industrial application built for a robotics company, providing detailed information about robots, their applications, and a contact form for inquiries.",
+      media: "/next-robot.mp4",
+      technologies: [
+        "Next.js",
+        "Tailwind CSS",
+        "Nodemailer",
+        "Mailtrap",
+        "Zod",
+        "React Hook Form",
+        "Framer Motion",
+        "Shadcn",
+        "TypeScript",
+        "Vercel",
+        "Git",
+        "GitHub",
+      ],
+    },
+  ],
+};
+
 export const heroIntro = {
   heading: "Dr.-Ing. M. Saeed Mafipour",
   subHeading:
     "A software developer based in Munich, Germany, creating seamless apps for digital experiences. Explore my works and let's get into touch for collaboration.",
 };
-
-import { FaGithub, FaGoogleScholar, FaLinkedin } from "react-icons/fa6";
 
 export const socialMediaLinks = [
   {
@@ -158,4 +238,6 @@ export const socialMediaLinks = [
 
 export const buttonLables = {
   cta: "Contact me",
+  demo: "Live Demo",
+  src: "Source code",
 };

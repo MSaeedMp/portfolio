@@ -12,7 +12,14 @@ import SocialMediaLinks from "@/components/hero/SocialMediaLinks";
 import SectionHeading from "@/components/home/SectionHeading";
 import SectionMainHeading from "@/components/home/SectionMainHeading";
 import SectionSubHeading from "@/components/home/SectionSubHeading";
-import { aboutContent, buttonLables, heroIntro } from "@/util/constants";
+import Project from "@/components/project/Project";
+import ProjectList from "@/components/project/ProjectList";
+import {
+  aboutContent,
+  buttonLables,
+  heroIntro,
+  projectsContent,
+} from "@/util/constants";
 
 const HomePage = () => {
   return (
@@ -31,7 +38,7 @@ const HomePage = () => {
         </Hero>
       </section>
 
-      <section className="pt-14 relative" id="about">
+      <section className="pt-14 pb-20 relative" id="about">
         <About>
           <SectionHeading>
             <SectionMainHeading heading={aboutContent.heading} />
@@ -39,8 +46,18 @@ const HomePage = () => {
           </SectionHeading>
           <MarkedText text={aboutContent.description} />
           <TechList />
-          <div className="h-[400px]"></div>
         </About>
+      </section>
+
+      <section className="pt-14 relative" id="projects">
+        <Project>
+          <SectionHeading>
+            <SectionMainHeading heading={projectsContent.heading} />
+            <SectionSubHeading heading={projectsContent.subHeading} />
+          </SectionHeading>
+          <ProjectList />
+          <div className="h-[500px]"></div>
+        </Project>
       </section>
     </main>
   );
