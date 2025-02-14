@@ -3,6 +3,7 @@ import CardGradientWrapper from "../global/CardGradientWrapper";
 import { Card, CardContent } from "../ui/card";
 import { Separator } from "../ui/separator";
 import CardMedia from "./CardMedia";
+import { ArrowRight } from "lucide-react";
 
 type ProjectType = {
   title: string;
@@ -44,16 +45,24 @@ const ProjectCard = ({ project }: { project: ProjectType }) => {
               </span>
             ))}
           </div>
-          <div className="mt-auto">
+          <div className="flex justify-between items-center mt-auto">
             <a
               href={demoLink}
               target="_blank"
               rel="noopener noreferrer"
-              className=""
+              className="flex items-center gap-2"
             >
               <span>{buttonLables.demo}</span>
-              <span>{}</span>
-             
+              <ArrowRight className="w-4 h-4" />
+            </a>
+            <a
+              href={githubLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2"
+            >
+              <span>{buttonLables.src}</span>
+              <ArrowRight className="w-4 h-4" />
             </a>
           </div>
         </CardContent>
