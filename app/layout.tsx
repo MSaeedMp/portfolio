@@ -3,11 +3,12 @@ import { Inter, Nunito } from "next/font/google";
 import "./globals.css";
 import Providers from "../components/providers";
 import Header from "@/components/header/Header";
+import CertificateModal from "@/components/certificate/CertificateModal";
 
 const nunito = Nunito({
   variable: "--font-nunito",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "900"],
+  weight: ["300", "400", "500", "600", "700", "800"],
   display: "swap",
 });
 
@@ -15,7 +16,7 @@ const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
   display: "swap",
-  weight: ["100", "200", "300", "400", "500", "600", "700", "900"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
@@ -57,6 +58,7 @@ export default function RootLayout({
         className={`${nunito.variable} ${inter.variable} antialiased text-foreground `}
       >
         <Providers>
+          <CertificateModal />
           <Header />
           {children}
         </Providers>

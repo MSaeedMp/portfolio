@@ -31,7 +31,7 @@ const ProjectCard = ({ project }: { project: ProjectType }) => {
     <Card className="group rounded-t-none rounded-b-md h-full">
       <CardContent className="flex flex-col gap-4 p-4 h-full">
         <CardMedia media={media} alt={title} />
-        <h2 className="font-extrabold text-2xl font-inter">{title}</h2>
+        <h2 className="font-extrabold text-2xl font-inter tracking-tight">{title}</h2>
         <Separator />
         <p className="font-medium">{description}</p>
         <h3 className="font-extrabold text-lg font-inter mt-2">{subtitle}</h3>

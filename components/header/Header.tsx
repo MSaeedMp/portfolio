@@ -27,7 +27,7 @@ const Header = () => {
   return (
     <header
       className={cn(
-        "w-full fixed h-16 md:h-20 flex itmes-center z-50 transition-colors duration-300 border border-transparent",
+        "w-full fixed h-16 md:h-20 flex justify-center itmes-center z-50 transition-colors duration-300 border border-transparent",
         headerMode === "solid" && "bg-background border border-b-primary/10 shadow-sm"
       )}
     >

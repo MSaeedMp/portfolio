@@ -28,7 +28,6 @@ const CardMedia = ({ media, alt }: { media: string; alt: string }) => {
           className={mediaStyle}
         />
       )}
-      <div className="absolute inset-0 bg-black/5 group-hover:scale-95 transition-transform duration-300 rounded-b-md rounded-t-none"></div>
     </div>
   );
 };

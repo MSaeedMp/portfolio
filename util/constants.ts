@@ -1,4 +1,11 @@
 import { FaGithub, FaGoogleScholar, FaLinkedin } from "react-icons/fa6";
+import {
+  GraduationCap,
+  BookOpen,
+  FileText,
+  Users,
+  BarChart,
+} from "lucide-react";
 
 export const navigationLinks = [
   {
@@ -209,6 +216,29 @@ export const projectsContent = {
         "GitHub",
       ],
     },
+    {
+      title: "Next Chat",
+      subtitle: "Technologies",
+      githubLink: "",
+      demoLink: "https://next-chat-app-umber.vercel.app/",
+      description:
+        "A Next.js-powered API for integrating large language models (LLMs), offering functionality similar to ChatGPT with the added flexibility to choose from 10 different LLMs.",
+      media: "/next-chat.mp4",
+      technologies: [
+        "AI",
+        "LLM",
+        "Next.js",
+        "Tailwind CSS",
+        "Groq API",
+        "React Markdown",
+        "Highlight.js",
+        "Shadcn",
+        "TypeScript",
+        "Vercel",
+        "Git",
+        "GitHub",
+      ],
+    },
   ],
 };
 
@@ -217,9 +247,65 @@ export const certificateContent = {
   subHeading: "Internationally valid certificates",
   certificates: [
     {
-      title: "",
-      subtitle: "",
-      description: "",
+      id: 1,
+      title: "TensorFlow Developer Certificate",
+      subtitle: "Deep Learning and Machine Learning Certification",
+      description:
+        "Awarded upon passing a five-hour online programming exam that tests proficiency in TensorFlow, including the ability to build and train neural networks for computer vision, NLP, and time-series forecasting.",
+      awardedBy: "TensorFlow, Google",
+      issueDate: "30/06/2023",
+      certificateId: "76696257",
+      badge: "/tensorflow-badge.png",
+      image: "/tensorflow-certificate.png",
+      sourceLink:
+        "https://www.credential.net/c6f7c1c8-f2f6-48de-ad17-2f9e9ad7092b#acc.8gVYQGBR",
+    },
+    {
+      id: 2,
+      title: "Dr.-Ing./Ph.D. Certificate",
+      subtitle: "Qualification Program in Engineering and Design",
+      description:
+        "Awarded upon the successful completion of a four-year research program at the Technical University of Munich (TUM), Munich, Germany, specializing in engineering and design.",
+      awardedBy: "Technical University of Munich (TUM), TUM Graduate School",
+      issueDate: "08/08/2024",
+      badge: "/tum-badge.png",
+      image: "/tum-certificate.png",
+    },
+  ],
+};
+
+export const researchContent = {
+  heading: "Research",
+  subHeading: "Research records and publications",
+  linkToGoogleScholar:
+    "https://scholar.google.com/citations?hl=en&user=ZueFqBkAAAAJ&view_op=list_works",
+  linkLable: "Full List of Papers",
+  stats: [
+    {
+      label: "Journal Papers",
+      value: "8",
+      icon: BookOpen,
+    },
+    {
+      label: "Conference Papers",
+      value: "13",
+      icon: FileText,
+    },
+
+    {
+      label: "H-Index",
+      value: "11",
+      icon: BarChart,
+    },
+    {
+      label: "i10-Index",
+      value: "12",
+      icon: GraduationCap,
+    },
+    {
+      label: "Citations",
+      value: "+1700",
+      icon: Users,
     },
   ],
 };

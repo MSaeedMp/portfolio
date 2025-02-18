@@ -2,7 +2,6 @@ import { socialMediaLinks } from "@/util/constants";
 import {
   Tooltip,
   TooltipContent,
-  TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 
@@ -12,7 +11,6 @@ const SocialMediaLinks = () => {
   const iconStyle = "w-8 h-8";
 
   return (
-    <TooltipProvider>
       <div className="flex items-center justify-center md:justify-start">
         {socialMediaLinks.map((link, index) => {
           const { name, href, icon: Icon } = link;
@@ -37,7 +35,6 @@ const SocialMediaLinks = () => {
           );
         })}
       </div>
-    </TooltipProvider>
   );
 };
 export default SocialMediaLinks;

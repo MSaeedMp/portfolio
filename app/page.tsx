@@ -1,7 +1,9 @@
 import About from "@/components/about/About";
+import TechCard from "@/components/about/TechCard";
 import TechList from "@/components/about/TechList";
-import CtaButton from "@/components/buttons/CtaButton";
+import CtaButton from "@/components/buttons/PrimaryButton";
 import Certificate from "@/components/certificate/Certificate";
+import CertificateCard from "@/components/certificate/CertificateCard";
 import CertificateList from "@/components/certificate/CertificateList";
 import MarkedText from "@/components/global/MarkedText";
 import Hero from "@/components/hero/Hero";
@@ -15,13 +17,19 @@ import SectionHeading from "@/components/home/SectionHeading";
 import SectionMainHeading from "@/components/home/SectionMainHeading";
 import SectionSubHeading from "@/components/home/SectionSubHeading";
 import Project from "@/components/project/Project";
+import ProjectCard from "@/components/project/ProjectCard";
 import ProjectList from "@/components/project/ProjectList";
+import Research from "@/components/research/Research";
+import ResearchLinkButton from "@/components/research/ResearchLinkButton";
+import ResearchStat from "@/components/research/ResearchStat";
+import ResearchStatList from "@/components/research/ResearchStatList";
 import {
   aboutContent,
   buttonLables,
   certificateContent,
   heroIntro,
   projectsContent,
+  researchContent,
 } from "@/util/constants";
 
 const HomePage = () => {
@@ -48,7 +56,11 @@ const HomePage = () => {
             <SectionSubHeading heading={aboutContent.subHeading} />
           </SectionHeading>
           <MarkedText text={aboutContent.description} />
-          <TechList />
+          <TechList>
+            {aboutContent.techs.map((tech, index) => (
+              <TechCard key={index} tech={tech} />
+            ))}
+          </TechList>
         </About>
       </section>
 
@@ -58,7 +70,11 @@ const HomePage = () => {
             <SectionMainHeading heading={projectsContent.heading} />
             <SectionSubHeading heading={projectsContent.subHeading} />
           </SectionHeading>
-          <ProjectList />
+          <ProjectList>
+            {projectsContent.projects.map((project, index) => (
+              <ProjectCard key={index} project={project} />
+            ))}
+          </ProjectList>
         </Project>
       </section>
 
@@ -68,9 +84,30 @@ const HomePage = () => {
             <SectionMainHeading heading={certificateContent.heading} />
             <SectionSubHeading heading={certificateContent.subHeading} />
           </SectionHeading>
-          <CertificateList />
-          <div className="h-[500px]"></div>
+          <CertificateList>
+            {certificateContent.certificates.map((certificate, index) => (
+              <CertificateCard key={index} certificate={certificate} />
+            ))}
+          </CertificateList>
         </Certificate>
+      </section>
+      <section className="pt-28 relative" id="research">
+        <Research>
+          <SectionHeading>
+            <SectionMainHeading heading={researchContent.heading} />
+            <SectionSubHeading heading={researchContent.subHeading} />
+          </SectionHeading>
+          <ResearchStatList>
+            {researchContent.stats.map((stat, index) => (
+              <ResearchStat stat={stat} key={index} />
+            ))}
+            <ResearchLinkButton
+              label={researchContent.linkLable}
+              link={researchContent.linkToGoogleScholar}
+            />
+          </ResearchStatList>
+          <div className="h-[500px] w-full"></div>
+        </Research>
       </section>
     </main>
   );
