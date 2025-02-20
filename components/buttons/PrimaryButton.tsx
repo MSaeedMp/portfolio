@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import { Button } from "../ui/button";
-// import { ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import GradientWrapper from "../global/GradientWrapper";
 
 const PrimaryButton = ({
   label,
@@ -13,16 +14,19 @@ const PrimaryButton = ({
 }) => {
   return (
     <Button
+      variant="ghost"
       className={cn(
-        "text-lg font-semibold bg-gradient-to-r from-secondary/70 to-primary/70 px-[3px] py-6 hover:from-secondary/100 hover:to-primary/100 rounded-xl group",
+        "text-lg font-semibold group h-12 rounded-xl p-0",
         className
       )}
       onClick={onClick}
     >
-      <div className="flex justify-center items-center gap-2 bg-slate-950 hover:bg-slate-900 rounded-lg w-full py-[7px] px-4">
-        {label}
-        {/* <ArrowRight className="group-hover:rotate-45 transition duration-200" /> */}
-      </div>
+      <GradientWrapper className="w-full h-full rounded-xl p-[3.5px]">
+        <div className="bg-background text-foreground flex justify-center items-center gap-2  font-bold w-full h-full rounded-xl p-4">
+          {label}
+          <ArrowRight className="group-hover:-rotate-45 transition duration-200" />
+        </div>
+      </GradientWrapper>
     </Button>
   );
 };

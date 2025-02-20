@@ -4,23 +4,13 @@ import Image from "next/image";
 import PrimaryButton from "../buttons/PrimaryButton";
 import { Card, CardContent } from "../ui/card";
 import { useCertificateModal } from "@/hooks/useCertificateModal";
+import { CertificateType, MediaFile } from "@/util/types";
+import { mediaFiles } from "@/util/constants";
+import { useTranslations } from "next-intl";
 
-type CertificateCardType = {
-  id: number;
-  title: string;
-  subtitle: string;
-  description: string;
-  awardedBy: string;
-  issueDate: string;
-  badge: string;
-  certificateId?: string;
-};
+const CertificateCard = ({ certificate }: { certificate: CertificateType }) => {
+  const t = useTranslations("certificatesSection");
 
-const CertificateCard = ({
-  certificate,
-}: {
-  certificate: CertificateCardType;
-}) => {
   const {
     id,
     title,
@@ -28,9 +18,10 @@ const CertificateCard = ({
     description,
     awardedBy,
     issueDate,
-    badge,
     certificateId,
   } = certificate;
+  const certificateMedia = mediaFiles[id];
+  const badge = (certificateMedia as MediaFile).badge;
 
   const { openCertificateModal, setCurrentCertificateId } =
     useCertificateModal();
@@ -39,13 +30,12 @@ const CertificateCard = ({
     setCurrentCertificateId(id);
     openCertificateModal();
   };
-
   return (
     <Card className="sm:rounded-r-xl sm:rounded-l-none rounded-t-none rounded-b-xl">
       <CardContent className="grid gird-cols-1 sm:grid-cols-[10rem_auto_auto] py-5 px-5 sm:px-3 gap-x-4">
         <div className="relative w-full sm:h-full h-48">
           <Image
-            src={badge}
+            src={badge as string}
             alt={title}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -59,14 +49,18 @@ const CertificateCard = ({
           <h4>{subtitle}</h4>
           <div className="my-2 flex flex-col gap-1">
             <span>
-              Awarded by:{" "}
+              {t("awardedBy")}:{" "}
               <span className="text-primary font-[700] font-inter">
                 {awardedBy}
               </span>
             </span>
-            <span>Issue date: {issueDate}</span>
+            <span>
+              {t("issueDate")}: {issueDate}
+            </span>
             {certificateId && (
-              <span>Certification ID: {certificate.certificateId}</span>
+              <span>
+                {t("certificationId")}: {certificate.certificateId}
+              </span>
             )}
           </div>
           <p className="text-muted-foreground">{description}</p>

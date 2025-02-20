@@ -1,0 +1,361 @@
+{
+  "navigation": [
+    {
+      "id": "aboutMe",
+      "name": "Über mich"
+    },
+    {
+      "id": "projects",
+      "name": "Projekte"
+    },
+    {
+      "id": "research",
+      "name": "Forschung"
+    },
+    {
+      "id": "certificates",
+      "name": "Zertifikate"
+    },
+    {
+      "id": "contactMe",
+      "name": "Kontakt"
+    }
+  ],
+  "hero": {
+    "heading": "Dr.-Ing. M. Saeed Mafipour",
+    "subHeading": "Ein Softwareentwickler mit Sitz in München, Deutschland, der nahtlose Apps für digitale Erlebnisse erstellt. Entdecken Sie meine Arbeiten und lassen Sie uns für eine Zusammenarbeit in Kontakt treten."
+  },
+  "socialMedia": [
+    {
+      "id": "googleScholar",
+      "name": "Google Scholar"
+    },
+    {
+      "id": "github",
+      "name": "Github"
+    },
+    {
+      "id": "linkedIn",
+      "name": "LinkedIn"
+    }
+  ],
+  "aboutMeSection": {
+    "heading": "Über mich",
+    "subHeading": "Fähigkeiten, Technologien und Erfahrungen",
+    "description": "Ich bin ein **Software-/Full-Stack-Entwickler** mit einem Hintergrund in **KI**, **Digitalisierung** und **Webentwicklung** und spezialisiere mich auf die Entwicklung intelligenter und skalierbarer Anwendungen. Ich habe meinen **Dr.-Ing./Ph.D. in Ingenieurwissenschaften** an der **Technischen Universität München (TUM)** erworben und vier Jahre als wissenschaftlicher Mitarbeiter und Postdoktorand gearbeitet. In dieser Zeit habe ich an hochmodernen Projekten gearbeitet, die darauf abzielten, Automatisierung und KI-basierte Lösungen in die Bauindustrie zu integrieren.\n\nMeine Expertise reicht von der Frontend- bis zur Backend-Entwicklung. Im Frontend spezialisiere ich mich auf **React**, **Next.js**, **Tailwind CSS** und **TypeScript**, um nahtlose und skalierbare Benutzeroberflächen zu erstellen. Für die Backend-Entwicklung nutze ich **MongoDB**, **PostgreSQL** und **Prisma**, um effiziente und gut strukturierte Datenbanken zu entwerfen. Mein Workflow wird durch **Docker**, **Git** und **CI/CD-Pipelines** optimiert, was einen reibungslosen Einsatz und die Wartbarkeit von Anwendungen gewährleistet.\n\nDerzeit konzentriere ich mich auf die Entwicklung **digitaler Lösungen**, die Arbeitsabläufe optimieren, Prozesse verbessern und die Entscheidungsfindung in komplexen Branchen fördern. Ich bin sehr daran interessiert, **Webanwendungen** zu erstellen, die teilweise oder stark von **KI** unterstützt werden. Ich bin versiert im Umgang mit den folgenden Technologien:",
+    "techs": [
+      {
+        "id": "programming",
+        "title": "Programmierung",
+        "subtitle": "Sprachen, Datenformate und Skripting-Technologien",
+        "tools": [
+          "JavaScript",
+          "TypeScript",
+          "Python",
+          "C#",
+          "C++",
+          "SQL",
+          "Java",
+          "LaTeX",
+          "MATLAB",
+          "XML",
+          "Json",
+          "Bash"
+        ]
+      },
+      {
+        "id": "frontend",
+        "title": "Frontend",
+        "subtitle": "Interaktive und reaktionsfähige Benutzeroberflächen erstellen",
+        "tools": [
+          "React",
+          "Next.js",
+          "Tailwind CSS",
+          "TypeScript",
+          "Redux",
+          "Shadcn",
+          "Sass",
+          "Bootstrap",
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "Vite",
+          "Styled-components",
+          "Framer Motion",
+          "React Query"
+        ]
+      },
+      {
+        "id": "backend",
+        "title": "Backend",
+        "subtitle": "Erstellen skalierbarer, effizienter und sicherer serverseitiger Anwendungen",
+        "tools": [
+          "Node.js",
+          "Express",
+          "Prisma",
+          "Supabase",
+          "MongoDB",
+          "PostgreSQL",
+          "Rest API",
+          "GraphQL",
+          "Sequelize",
+          "Mongoose"
+        ]
+      },
+      {
+        "id": "toolsAndApis",
+        "title": "Werkzeuge und APIs",
+        "subtitle": "Andere Werkzeuge und APIs",
+        "tools": [
+          "Git",
+          "Webpack",
+          "ESLint",
+          "NextAuth",
+          "Prettier",
+          "Github",
+          "VS Code",
+          "Docker",
+          "Leaflet",
+          "MapboxAPI",
+          "Google API",
+          "Stripe API",
+          "OpenAI API"
+        ]
+      },
+      {
+        "id": "aiMl",
+        "title": "KI & Maschinelles Lernen",
+        "subtitle": "KI-Frameworks und Bibliotheken",
+        "tools": [
+          "TensorFlow",
+          "PyTorch",
+          "Keras",
+          "Scikit-Learn",
+          "Pandas",
+          "NumPy",
+          "3D Deep Learning",
+          "Hugging Face Transformers",
+          "YOLO",
+          "LLM",
+          "Transformers",
+          "Generative KI"
+        ]
+      }
+    ]
+  },
+  "projectsSection": {
+    "heading": "Projekte",
+    "subHeading": "Ausgewählte Arbeiten und Projekte",
+    "projects": [
+      {
+        "id": "nextCabin",
+        "title": "Next Cabin",
+        "subtitle": "Technologien",
+        "description": "Eine E-Commerce-App zur Reservierung von Hütten mit einem Benutzerdashboard, Geolokalisierung, komplexem Filtersystem und mehr.",
+        "technologies": [
+          "Next.js",
+          "Tailwind CSS",
+          "Zod",
+          "React Hook Form",
+          "Leaflet",
+          "Shadcn",
+          "TypeScript",
+          "NextAuth",
+          "Supabase",
+          "PostgreSQL",
+          "Prisma",
+          "Vercel",
+          "Git",
+          "GitHub"
+        ]
+      },
+      {
+        "id": "nextStore",
+        "title": "Next Store",
+        "subtitle": "Technologien",
+        "description": "Eine E-Commerce-Plattform für den Kauf von Produkten mit einem Admin-Dashboard, nahtlosen Zahlungen und sicherer Authentifizierung.",
+        "technologies": [
+          "Next.js",
+          "Tailwind CSS",
+          "Framer Motion",
+          "Zod",
+          "React Hook Form",
+          "Stripe",
+          "Shadcn",
+          "TypeScript",
+          "NextAuth",
+          "Supabase",
+          "PostgreSQL",
+          "Prisma",
+          "Vercel",
+          "Git",
+          "GitHub"
+        ]
+      },
+      {
+        "id": "nextRobot",
+        "title": "Next Robot",
+        "subtitle": "Technologien",
+        "description": "Eine industrielle Anwendung für ein Robotikunternehmen, die detaillierte Informationen über Roboter, ihre Anwendungen und ein Kontaktformular für Anfragen bietet.",
+        "technologies": [
+          "Next.js",
+          "Tailwind CSS",
+          "Nodemailer",
+          "Mailtrap",
+          "Zod",
+          "React Hook Form",
+          "Framer Motion",
+          "Shadcn",
+          "TypeScript",
+          "Vercel",
+          "Git",
+          "GitHub"
+        ]
+      },
+      {
+        "id": "nextChat",
+        "title": "Next Chat",
+        "subtitle": "Technologien",
+        "description": "Eine Next.js-basierte API zur Integration großer Sprachmodelle (LLMs), die ähnliche Funktionen wie ChatGPT bietet, aber die Flexibilität bietet, zwischen 10 verschiedenen LLMs zu wählen.",
+        "technologies": [
+          "KI",
+          "LLM",
+          "Next.js",
+          "Tailwind CSS",
+          "Groq API",
+          "React Markdown",
+          "Highlight.js",
+          "Shadcn",
+          "TypeScript",
+          "Vercel",
+          "Git",
+          "GitHub"
+        ]
+      },
+      {
+        "id": "msfdNet",
+        "title": "MSFD-Net",
+        "subtitle": "Technologien",
+        "description": "Ein Forschungsprojekt an der TUM zur Entwicklung einer 3D-Deep-Learning-Architektur für die semantische Segmentierung großflächiger Brückenpunktwolken.",
+        "technologies": [
+          "KI",
+          "3D Deep Learning",
+          "Computer Vision",
+          "Maschinelles Lernen",
+          "Python",
+          "OpenCV",
+          "Open3D",
+          "PyTorch",
+          "CUDA",
+          "Transformers",
+          "Numpy",
+          "Scikit-Learn",
+          "GitLab"
+        ]
+      },
+      {
+        "id": "revitPlugin",
+        "title": "TwinGen",
+        "subtitle": "Technologien",
+        "description": "Ein Forschungsprojekt an der TUM zur Entwicklung eines Plugins für Autodesk Revit zur Generierung von 3D-Modellen von Brücken aus Punktwolken.",
+        "technologies": [
+          "KI",
+          "C#",
+          "C++",
+          "Optimierung",
+          "Metaheuristische Algorithmen",
+          "Reverse Engineering",
+          "Parametrisches Modellieren",
+          "3D-Modellrekonstruktion",
+          "Revit",
+          "Computer Vision",
+          "OpenCV",
+          "CloudCompare"
+        ]
+      }
+    ]
+  },
+  "researchSection": {
+    "heading": "Forschung",
+    "subHeading": "Forschungsarbeiten und Veröffentlichungen",
+    "stats": [
+      {
+        "id": "journalPapers",
+        "title": "Zeitschriftenartikel",
+        "value": "8"
+      },
+      {
+        "id": "conferencePapers",
+        "title": "Konferenzbeiträge",
+        "value": "13"
+      },
+      {
+        "id": "hIndex",
+        "title": "H-Index",
+        "value": "11"
+      },
+      {
+        "id": "i10Index",
+        "title": "i10-Index",
+        "value": "12"
+      },
+      {
+        "id": "citations",
+        "title": "Zitationen",
+        "value": "+1700"
+      }
+    ]
+  },
+  "certificatesSection": {
+    "heading": "Zertifikate",
+    "subHeading": "International gültige Zertifikate",
+    "awardedBy": "Verliehen von",
+    "issueDate": "Ausstellungsdatum",
+    "certificationId": "Zertifizierungs-ID",
+    "certificates": [
+      {
+        "id": "tfCertificate",
+        "title": "TensorFlow Developer Zertifikate",
+        "subtitle": "Zertifizierung in Deep Learning und Maschinellem Lernen",
+        "description": "Verliehen nach Bestehen einer fünfstündigen Online-Programmierprüfung, die die Kompetenz in TensorFlow testet, einschließlich der Fähigkeit, neuronale Netze für Computer Vision, NLP und Zeitreihenprognosen zu erstellen und zu trainieren.",
+        "awardedBy": "TensorFlow, Google",
+        "issueDate": "30/06/2023",
+        "certificateId": "76696257"
+      },
+      {
+        "id": "phdCertificate",
+        "title": "Dr.-Ing./Ph.D. Zertifikat",
+        "subtitle": "Qualifikationsprogramm in Ingenieurwesen und Design",
+        "description": "Verliehen nach erfolgreichem Abschluss eines vierjährigen Forschungsprogramms an der Technischen Universität München (TUM), München, Deutschland, mit Schwerpunkt auf Ingenieurwesen und Design.",
+        "awardedBy": "Technische Universität München (TUM), TUM Graduate School",
+        "issueDate": "08/08/2024"
+      }
+    ]
+  },
+  "contactMeSection": {
+    "heading": "Kontaktieren Sie mich",
+    "subHeading": "Zögern Sie nicht, mich per E-Mail, LinkedIn oder Github zu kontaktieren.",
+    "contacts": [
+      {
+        "id": "email",
+        "name": "E-Mail"
+      },
+      {
+        "id": "github",
+        "name": "Github"
+      },
+      {
+        "id": "linkedIn",
+        "name": "LinkedIn"
+      }
+    ]
+  },
+  "footer": "M. Saeed Mafipour © 2025 Alle Rechte vorbehalten.",
+  "buttons": {
+    "contactMe": "Kontaktieren Sie mich",
+    "vercel": "Live-Demo",
+    "github": "Quellcode",
+    "paper": "Forschungsarbeit",
+    "googleScholar": "Alle Veröffentlichungen"
+  }
+}

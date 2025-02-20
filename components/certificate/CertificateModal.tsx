@@ -1,10 +1,12 @@
 "use client";
 
 import { useCertificateModal } from "@/hooks/useCertificateModal";
-import { certificateContent } from "@/util/constants";
+import { links, mediaFiles } from "@/util/constants";
 import Image from "next/image";
 import CloseButton from "../buttons/CloseButton";
 import { AiOutlineSafetyCertificate } from "react-icons/ai";
+import { useTranslations } from "next-intl";
+import { CertificateType, MediaFile } from "@/util/types";
 
 const CertificateModal = () => {
   const {
@@ -12,15 +14,23 @@ const CertificateModal = () => {
     currentCertificateId,
     closeCertificateModal,
   } = useCertificateModal();
+
+  const t = useTranslations();
   if (!isCertificateModalVisible || !currentCertificateId) return null;
 
-  const currentCertificate = certificateContent.certificates.find(
-    (certificate) => certificate.id === currentCertificateId
-  );
+  const currentCertificate = t
+    .raw("certificatesSection.certificates")
+    ?.find(
+      (certificate: CertificateType) => certificate.id === currentCertificateId
+    );
+
+  const sourceLink = links[currentCertificateId];
 
   if (!currentCertificate) return null;
 
-  const { title, image, sourceLink } = currentCertificate;
+  const { title, id } = currentCertificate;
+  const certificateMedia = mediaFiles[id];
+  const image = (certificateMedia as MediaFile).image;
 
   return (
     <div
@@ -37,7 +47,7 @@ const CertificateModal = () => {
             <span className="font-medium font-inter">{title}</span>
             {sourceLink && (
               <a
-                href={sourceLink}
+                href={sourceLink as string}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-600 hover:underline"

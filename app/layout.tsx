@@ -1,9 +1,7 @@
+import "./globals.css";
 import type { Metadata } from "next";
 import { Inter, Nunito } from "next/font/google";
-import "./globals.css";
-import Providers from "../components/providers";
-import Header from "@/components/header/Header";
-import CertificateModal from "@/components/certificate/CertificateModal";
+import Providers from "@/components/providers";
 
 const nunito = Nunito({
   variable: "--font-nunito",
@@ -47,7 +45,7 @@ export const metadata: Metadata = {
   manifest: "/site.webmanifest",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -57,11 +55,7 @@ export default function RootLayout({
       <body
         className={`${nunito.variable} ${inter.variable} antialiased text-foreground `}
       >
-        <Providers>
-          <CertificateModal />
-          <Header />
-          {children}
-        </Providers>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

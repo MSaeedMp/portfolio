@@ -1,11 +1,6 @@
+import { TechType } from "@/util/types";
 import { Card, CardContent, CardTitle } from "../ui/card";
 import { Separator } from "../ui/separator";
-
-type TechType = {
-  title: string;
-  subtitle: string;
-  tools: string[];
-};
 
 const TechCard = ({ tech }: { tech: TechType }) => {
   const { title, subtitle, tools } = tech;

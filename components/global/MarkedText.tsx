@@ -3,7 +3,7 @@ import ReactMarkdown from "react-markdown";
 const MarkedText = ({ text }: { text: string }) => {
   return (
     <ReactMarkdown
-      className="text-lg text-foreground"
+      className="text-lg text-foreground bg-background/40 rounded-b-xl rounded-none leading-8 text-left"
       components={{
         strong: ({ children }) => (
           <span className="text-primary text-lg font-semibold">

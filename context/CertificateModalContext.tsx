@@ -5,8 +5,8 @@ type CertificateModalContextType = {
   setIsCertificateModalVisible: React.Dispatch<React.SetStateAction<boolean>>;
   closeCertificateModal: () => void;
   openCertificateModal: () => void;
-  currentCertificateId: number | null;
-  setCurrentCertificateId: React.Dispatch<React.SetStateAction<number | null>>;
+  currentCertificateId: string | null;
+  setCurrentCertificateId: React.Dispatch<React.SetStateAction<string | null>>;
 };
 
 export const CertificateModalContext =
@@ -16,7 +16,7 @@ export const ModalProvider = ({ children }: { children: React.ReactNode }) => {
   const [isCertificateModalVisible, setIsCertificateModalVisible] =
     useState<boolean>(false);
   const [currentCertificateId, setCurrentCertificateId] = useState<
-    number | null
+    string | null
   >(null);
   const closeCertificateModal = () => setIsCertificateModalVisible(false);
   const openCertificateModal = () => setIsCertificateModalVisible(true);

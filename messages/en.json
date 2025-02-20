@@ -1,0 +1,361 @@
+{
+  "navigation": [
+    {
+      "id": "aboutMe",
+      "name": "About Me"
+    },
+    {
+      "id": "projects",
+      "name": "Projects"
+    },
+    {
+      "id": "research",
+      "name": "Research"
+    },
+    {
+      "id": "certificates",
+      "name": "Certificates"
+    },
+    {
+      "id": "contactMe",
+      "name": "Contact Me"
+    }
+  ],
+  "hero": {
+    "heading": "Dr.-Ing. M. Saeed Mafipour",
+    "subHeading": "A software developer based in Munich, Germany, creating seamless apps for digital experiences. Explore my works and let's get in touch for collaboration."
+  },
+  "socialMedia": [
+    {
+      "id": "googleScholar",
+      "name": "Google Scholar"
+    },
+    {
+      "id": "github",
+      "name": "Github"
+    },
+    {
+      "id": "linkedIn",
+      "name": "LinkedIn"
+    }
+  ],
+  "aboutMeSection": {
+    "heading": "About Me",
+    "subHeading": "Skills, Technologies, and Experience",
+    "description": "I am a **software/full-stack developer** with a background in **AI**, **digitalization**, and **web development**, specializing in building intelligent and scalable applications. I earned my **Dr.-Ing./Ph.D. in Engineering** from the **Technical University of Munich (TUM)** and spent four years as a research assistant and postdoctoral researcher. During this time, I worked on cutting-edge projects focused on bringing automation and AI-based solutions to the construction environment.\n\nMy expertise extends from frontend to backend development. On the frontend, I specialize in **React**, **Next.js**, **Tailwind CSS**, and **TypeScript** to create seamless and scalable user interfaces. For backend development, I utilize **MongoDB**, **PostgreSQL**, and **Prisma** to design efficient and well-structured databases. My workflow is enhanced with **Docker**, **Git**, and **CI/CD pipelines**, ensuring smooth deployment and maintainability of applications.\n\nI am currently focused on developing **digital solutions** that streamline workflows, optimize processes, and enhance decision-making in complex industries. I am highly interested in creating **web applications** that are partially or heavily supported by **AI**. I am skilled in utilizing the following technologies:",
+    "techs": [
+      {
+        "id": "programming",
+        "title": "Programming",
+        "subtitle": "Languages, data formats, and Scripting Technologies",
+        "tools": [
+          "JavaScript",
+          "TypeScript",
+          "Python",
+          "C#",
+          "C++",
+          "SQL",
+          "Java",
+          "LaTeX",
+          "MATLAB",
+          "XML",
+          "Json",
+          "Bash"
+        ]
+      },
+      {
+        "id": "frontend",
+        "title": "Frontend",
+        "subtitle": "Building interactive and responsive user interfaces",
+        "tools": [
+          "React",
+          "Next.js",
+          "Tailwind CSS",
+          "TypeScript",
+          "Redux",
+          "Shadcn",
+          "Sass",
+          "Bootstrap",
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "Vite",
+          "Styled-components",
+          "Framer Motion",
+          "React Query"
+        ]
+      },
+      {
+        "id": "backend",
+        "title": "Backend",
+        "subtitle": "Building scalable, efficient, and secure server-side applications",
+        "tools": [
+          "Node.js",
+          "Express",
+          "Prisma",
+          "Supabase",
+          "MongoDB",
+          "PostgreSQL",
+          "Rest API",
+          "GraphQL",
+          "Sequelize",
+          "Mongoose"
+        ]
+      },
+      {
+        "id": "toolsAndApis",
+        "title": "Tools and APIs",
+        "subtitle": "Other tools and APIs",
+        "tools": [
+          "Git",
+          "Webpack",
+          "ESLint",
+          "NextAuth",
+          "Prettier",
+          "Github",
+          "VS Code",
+          "Docker",
+          "Leaflet",
+          "MapboxAPI",
+          "Google API",
+          "Stripe API",
+          "OpenAI API"
+        ]
+      },
+      {
+        "id": "aiMl",
+        "title": "AI & Machine Learning",
+        "subtitle": "AI Frameworks and Libraries",
+        "tools": [
+          "TensorFlow",
+          "PyTorch",
+          "Keras",
+          "Scikit-Learn",
+          "Pandas",
+          "NumPy",
+          "3D Deep learning",
+          "Hugging Face Transformers",
+          "YOLO",
+          "LLM",
+          "Transformers",
+          "Generative AI"
+        ]
+      }
+    ]
+  },
+  "projectsSection": {
+    "heading": "Projects",
+    "subHeading": "Selected works and projects",
+    "projects": [
+      {
+        "id": "nextCabin",
+        "title": "Next Cabin",
+        "subtitle": "Technologies",
+        "description": "An e-commerce app for reserving cabins, featuring a user dashboard, geolocation, complex filtering and search system, secure authentication, and more.",
+        "technologies": [
+          "Next.js",
+          "Tailwind CSS",
+          "Zod",
+          "React Hook Form",
+          "Leaflet",
+          "Shadcn",
+          "TypeScript",
+          "NextAuth",
+          "Supabase",
+          "PostgreSQL",
+          "Prisma",
+          "Vercel",
+          "Git",
+          "GitHub"
+        ]
+      },
+      {
+        "id": "nextStore",
+        "title": "Next Store",
+        "subtitle": "Technologies",
+        "description": "An e-commerce platform for purchasing products, featuring an admin dashboard, seamless payments, secure authentication, and more.",
+        "technologies": [
+          "Next.js",
+          "Tailwind CSS",
+          "Framer Motion",
+          "Zod",
+          "React Hook Form",
+          "Stripe",
+          "Shadcn",
+          "TypeScript",
+          "NextAuth",
+          "Supabase",
+          "PostgreSQL",
+          "Prisma",
+          "Vercel",
+          "Git",
+          "GitHub"
+        ]
+      },
+      {
+        "id": "nextRobot",
+        "title": "Next Robot",
+        "subtitle": "Technologies",
+        "description": "An industrial application built for a robotics company, providing detailed information about robots, their applications, and a contact form for inquiries.",
+        "technologies": [
+          "Next.js",
+          "Tailwind CSS",
+          "Nodemailer",
+          "Mailtrap",
+          "Zod",
+          "React Hook Form",
+          "Framer Motion",
+          "Shadcn",
+          "TypeScript",
+          "Vercel",
+          "Git",
+          "GitHub"
+        ]
+      },
+      {
+        "id": "nextChat",
+        "title": "Next Chat",
+        "subtitle": "Technologies",
+        "description": "A Next.js-powered API for integrating large language models (LLMs), offering functionality similar to ChatGPT with the added flexibility to choose from 10 different LLMs.",
+        "technologies": [
+          "AI",
+          "LLM",
+          "Next.js",
+          "Tailwind CSS",
+          "Groq API",
+          "React Markdown",
+          "Highlight.js",
+          "Shadcn",
+          "TypeScript",
+          "Vercel",
+          "Git",
+          "GitHub"
+        ]
+      },
+      {
+        "id": "msfdNet",
+        "title": "MSFD-Net",
+        "subtitle": "Technologies",
+        "description": "A reasearch project conducted at TUM to develop a 3D deep learning architecture for semantic segmentation of large-scale bridge point clouds.",
+        "technologies": [
+          "AI",
+          "3D Deep Learning",
+          "Computer Vision",
+          "Machine Learning",
+          "Python",
+          "Open CV",
+          "Open 3D",
+          "Pytorch",
+          "CUDA",
+          "Transformers",
+          "Numpy",
+          "Scikit-Learn",
+          "GitLab"
+        ]
+      },
+      {
+        "id": "revitPlugin",
+        "title": "TwinGen",
+        "subtitle": "Technologies",
+        "description": "A reasearch project conducted at TUM to develop a plugin for Autodesk Revit to generate the 3D model of bridges from their point clouds.",
+        "technologies": [
+          "AI",
+          "C#",
+          "C++",
+          "Optimization",
+          "Metaheuristi Algorithms",
+          "Reverse Engineering",
+          "Parametric Modeling",
+          "3D Model Reconstruction",
+          "Revit",
+          "Computer Vision",
+          "Open CV",
+          "Cloud Compare"
+        ]
+      }
+    ]
+  },
+  "researchSection": {
+    "heading": "Research",
+    "subHeading": "Research records and publications",
+    "stats": [
+      {
+        "id": "journalPapers",
+        "title": "Journal Papers",
+        "value": "8"
+      },
+      {
+        "id": "conferencePapers",
+        "title": "Conference Papers",
+        "value": "13"
+      },
+      {
+        "id": "hIndex",
+        "title": "H-Index",
+        "value": "11"
+      },
+      {
+        "id": "i10Index",
+        "title": "i10-Index",
+        "value": "12"
+      },
+      {
+        "id": "citations",
+        "title": "Citations",
+        "value": "+1700"
+      }
+    ]
+  },
+  "certificatesSection": {
+    "heading": "Certificates",
+    "subHeading": "Internationally valid certificates",
+    "awardedBy": "Awarded by",
+    "issueDate": "Issue date",
+    "certificationId": "Certification ID",
+    "certificates": [
+      {
+        "id": "tfCertificate",
+        "title": "TensorFlow Developer Certificate",
+        "subtitle": "Deep Learning and Machine Learning Certification",
+        "description": "Awarded upon passing a five-hour online programming exam that tests proficiency in TensorFlow, including the ability to build and train neural networks for computer vision, NLP, and time-series forecasting.",
+        "awardedBy": "TensorFlow, Google",
+        "issueDate": "30/06/2023",
+        "certificateId": "76696257"
+      },
+      {
+        "id": "phdCertificate",
+        "title": "Dr.-Ing./Ph.D. Certificate",
+        "subtitle": "Qualification Program in Engineering and Design",
+        "description": "Awarded upon the successful completion of a four-year research program at the Technical University of Munich (TUM), Munich, Germany, specializing in engineering and design.",
+        "awardedBy": "Technical University of Munich (TUM), TUM Graduate School",
+        "issueDate": "08/08/2024"
+      }
+    ]
+  },
+  "contactMeSection": {
+    "heading": "Contact Me",
+    "subHeading": "Feel free to reach out via email, LinkedIn, or Github.",
+    "contacts": [
+      {
+        "id": "email",
+        "name": "Email"
+      },
+      {
+        "id": "github",
+        "name": "Github"
+      },
+      {
+        "id": "linkedIn",
+        "name": "LinkedIn"
+      }
+    ]
+  },
+  "footer": "M.Saeed Mafipour © 2025 All rights reserved.",
+  "buttons": {
+    "contactMe": "Contact Me",
+    "vercel": "Live Demo",
+    "github": "Source Code",
+    "paper": "Research paper",
+    "googleScholar": "Full list of papers"
+  }
+}
