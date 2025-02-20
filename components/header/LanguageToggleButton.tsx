@@ -1,5 +1,4 @@
-"use client";
-
+import { useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { Button } from "../ui/button";
 import { cn } from "@/lib/utils";
@@ -7,13 +6,13 @@ import { cn } from "@/lib/utils";
 const LanguageToggleButton = () => {
   const pathname = usePathname();
   const router = useRouter();
+  const [language, setLanguage] = useState(pathname.startsWith("/en") ? "en" : "de");
 
   const handleToggleLanguage = () => {
-    if (pathname.startsWith("/en")) {
-      router.push(pathname.replace(/^\/en/, "/de"), { scroll: false });
-    } else if (pathname.startsWith("/de")) {
-      router.push(pathname.replace(/^\/de/, "/en"), { scroll: false });
-    }
+    const newLanguage = language === "en" ? "de" : "en";
+    setLanguage(newLanguage);
+    const newPathname = pathname.replace(`/${language}`, `/${newLanguage}`);
+    router.push(newPathname, { scroll: false });
   };
 
   return (
@@ -27,7 +26,7 @@ const LanguageToggleButton = () => {
         <span
           className={cn(
             "text-sm text-muted-foreground",
-            pathname.startsWith("/en") ? "!text-primary font-semibold group-hover:!text-muted-foreground group-hover:font-normal" : "group-hover:!text-primary font-semibold"
+            language === "en" ? "!text-primary font-semibold group-hover:!text-muted-foreground group-hover:font-normal" : "group-hover:!text-primary font-semibold"
           )}
         >
           EN
@@ -36,7 +35,7 @@ const LanguageToggleButton = () => {
         <span
           className={cn(
             "text-sm text-muted-foreground",
-            pathname.startsWith("/de") ? "!text-primary font-semibold group-hover:!text-muted-foreground group-hover:font-normal" : "group-hover:!text-primary font-semibold"
+            language === "de" ? "!text-primary font-semibold group-hover:!text-muted-foreground group-hover:font-normal" : "group-hover:!text-primary font-semibold"
           )}
         >
           DE
