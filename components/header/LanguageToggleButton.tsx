@@ -27,7 +27,8 @@ const LanguageToggleButton = () => {
 
     startTransition(() => {
       router.replace(
-        `${newPathname}?${currentParams.toString()}${currentHash}`
+        `${newPathname}?${currentParams.toString()}${currentHash}`,
+        { scroll: false }
       );
       router.refresh();
     });

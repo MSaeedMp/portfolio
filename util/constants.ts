@@ -62,12 +62,12 @@ export const links: { [key: string]: string | { [key: string]: string } } = {
     paper:
       "https://www.sciencedirect.com/science/article/abs/pii/S0926580523003618",
   },
-  home: "#home",
-  aboutMe: "#about-me",
-  projects: "#projects",
-  certificates: "#certificates",
-  research: "#research",
-  contactMe: "#contact-me",
+  home: "/#home",
+  aboutMe: "/#about-me",
+  projects: "/#projects",
+  certificates: "/#certificates",
+  research: "/#research",
+  contactMe: "/#contact-me",
 };
 
 export const mediaFiles: {

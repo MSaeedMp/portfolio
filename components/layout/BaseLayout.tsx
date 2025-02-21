@@ -38,9 +38,7 @@ export default async function BaseLayout({ children, locale }: Props) {
           <NextIntlClientProvider messages={messages}>
             <CertificateModal />
             <BackToTop />
-            <div className="fixed inset-0 -z-20">
-              <BgMovingParticles />
-            </div>
+            <BgMovingParticles />
             <Header />
             {children}
             <Footer />
