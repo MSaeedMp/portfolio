@@ -5,15 +5,19 @@ import { Button } from "../ui/button";
 import { cn } from "@/lib/utils";
 import { useTransition } from "react";
 import { usePathname, useRouter } from "@/i18n/routing";
+import { useLocale } from "next-intl";
 
-const LanguageToggleButton = ({ label }: { label: string }) => {
+const LanguageToggleButton = () => {
   const pathname = usePathname();
   const router = useRouter();
   const params = useParams();
   const [isPending, startTransition] = useTransition();
+  const locale = useLocale();
+
+  console.log(locale);
 
   const handleToggleLanguage = () => {
-    const nextLocale = label === "en" ? "de" : "en";
+    const nextLocale = locale === "en" ? "de" : "en";
     startTransition(() => {
       // @ts-expect-error -- TypeScript will validate that only known `params`
       router.replace({ pathname, params }, { locale: nextLocale });
@@ -31,7 +35,7 @@ const LanguageToggleButton = ({ label }: { label: string }) => {
         <span
           className={cn(
             "text-sm text-muted-foreground",
-            label === "en"
+            locale === "en"
               ? "!text-primary font-semibold group-hover:!text-muted-foreground group-hover:font-normal"
               : "group-hover:!text-primary font-semibold"
           )}
@@ -42,7 +46,7 @@ const LanguageToggleButton = ({ label }: { label: string }) => {
         <span
           className={cn(
             "text-sm text-muted-foreground",
-            label === "de"
+            locale === "de"
               ? "!text-primary font-semibold group-hover:!text-muted-foreground group-hover:font-normal"
               : "group-hover:!text-primary font-semibold"
           )}

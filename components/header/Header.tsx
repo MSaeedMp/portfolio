@@ -15,8 +15,6 @@ const Header = () => {
   const [headerMode, setHeaderMode] = useState<"solid" | "transparent">(
     "transparent"
   );
-  const pathname = usePathname();
-  const label = pathname.startsWith("/en") ? "en" : "de";
 
   useEffect(() => {
     const handleScrollY = () => {
@@ -48,7 +46,7 @@ const Header = () => {
             <Navigation className="hidden lg:flex lg:items-center" />
           </div>
           <div className="flex items-center sm:gap-6 gap-3">
-            <LanguageToggleButton label={label} />
+            <LanguageToggleButton />
             <ThemeToggleButton />
             <HamburgerMenu className="lg:hidden" />
           </div>
