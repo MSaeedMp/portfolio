@@ -24,17 +24,21 @@ export default async function LocaleLayout({
   const messages = await getMessages({ locale });
 
   return (
-    <NextIntlClientProvider messages={messages}>
-      <Providers>
-        <CertificateModal />
-        <BackToTop />
-        <div className="fixed inset-0 -z-20">
-          <BgMovingParticles />
-        </div>
-        <Header />
-        {children}
-        <Footer />
-      </Providers>
-    </NextIntlClientProvider>
+    <html lang={locale}>
+      <body>
+        <NextIntlClientProvider messages={messages}>
+          <Providers>
+            <CertificateModal />
+            <BackToTop />
+            <div className="fixed inset-0 -z-20">
+              <BgMovingParticles />
+            </div>
+            <Header />
+            {children}
+            <Footer />
+          </Providers>
+        </NextIntlClientProvider>
+      </body>
+    </html>
   );
 }
