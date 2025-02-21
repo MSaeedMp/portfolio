@@ -27,9 +27,9 @@ export default async function LocaleLayout({
         <Providers>
           <CertificateModal />
           <BackToTop />
-          <div className="fixed inset-0 -z-20">
+          {/* <div className="fixed inset-0 -z-20">
             <BgMovingParticles />
-          </div>
+          </div> */}
           <Header />
           {children}
           <Footer />

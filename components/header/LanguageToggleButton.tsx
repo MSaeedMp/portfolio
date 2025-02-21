@@ -6,15 +6,13 @@ import { cn } from "@/lib/utils";
 const LanguageToggleButton = () => {
   const pathname = usePathname();
   const router = useRouter();
-  const [language, setLanguage] = useState(
-    pathname.startsWith("/en") ? "en" : "de"
-  );
+  const [language, setLanguage] = useState(pathname.startsWith("/en") ? "en" : "de");
 
   const handleToggleLanguage = () => {
     const newLanguage = language === "en" ? "de" : "en";
     setLanguage(newLanguage);
     const newPathname = pathname.replace(`/${language}`, `/${newLanguage}`);
-    router.replace(newPathname, { scroll: false });
+    router.push(newPathname, { scroll: false });
   };
 
   return (
@@ -28,9 +26,7 @@ const LanguageToggleButton = () => {
         <span
           className={cn(
             "text-sm text-muted-foreground",
-            language === "en"
-              ? "!text-primary font-semibold group-hover:!text-muted-foreground group-hover:font-normal"
-              : "group-hover:!text-primary font-semibold"
+            language === "en" ? "!text-primary font-semibold group-hover:!text-muted-foreground group-hover:font-normal" : "group-hover:!text-primary font-semibold"
           )}
         >
           EN
@@ -39,9 +35,7 @@ const LanguageToggleButton = () => {
         <span
           className={cn(
             "text-sm text-muted-foreground",
-            language === "de"
-              ? "!text-primary font-semibold group-hover:!text-muted-foreground group-hover:font-normal"
-              : "group-hover:!text-primary font-semibold"
+            language === "de" ? "!text-primary font-semibold group-hover:!text-muted-foreground group-hover:font-normal" : "group-hover:!text-primary font-semibold"
           )}
         >
           DE
