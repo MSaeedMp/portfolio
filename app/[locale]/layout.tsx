@@ -7,7 +7,7 @@ import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
 import { i18n } from "@/i18n";
 import { getMessages } from "next-intl/server";
-// import BgMovingParticles from "@/components/layout/BgMovingParticles";
+import BgMovingParticles from "@/components/layout/BgMovingParticles";
 
 export default async function LocaleLayout({
   children,
@@ -16,9 +16,13 @@ export default async function LocaleLayout({
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
 }>) {
-  const locale = (await params).locale;
+  const { locale } = await params;
 
-  if (!i18n.locales.includes(locale)) notFound();
+  if (!i18n.locales.includes(locale)) {
+    console.log("not found");
+
+    notFound();
+  }
   const messages = await getMessages();
 
   return (
@@ -27,9 +31,9 @@ export default async function LocaleLayout({
         <Providers>
           <CertificateModal />
           <BackToTop />
-          {/* <div className="fixed inset-0 -z-20">
+          <div className="fixed inset-0 -z-20">
             <BgMovingParticles />
-          </div> */}
+          </div>
           <Header />
           {children}
           <Footer />
