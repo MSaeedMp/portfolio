@@ -8,7 +8,6 @@ import { links } from "@/util/constants";
 
 const Navigation = ({ className }: { className?: string }) => {
   const t = useTranslations();
-
   return (
     <nav className={cn("h-full", className)}>
       {t.raw("navigation").map((nav: NavType) => (

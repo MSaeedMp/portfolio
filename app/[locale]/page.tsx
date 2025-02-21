@@ -65,7 +65,7 @@ const HomePage = () => {
         </Hero>
       </Section>
 
-      <Section id="aboutMe">
+      <Section id="about-me">
         <About>
           <MotionBottomToTop>
             <SectionHeading>
@@ -141,7 +141,7 @@ const HomePage = () => {
         </Certificate>
       </Section>
 
-      <Section id="contactMe" className="!pb-36">
+      <Section id="contact-me" className="!pb-36">
         <Contact>
           <MotionBottomToTop>
             <SectionHeading>
