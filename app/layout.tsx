@@ -1,21 +1,6 @@
 import "./globals.css";
 import Providers from "@/components/providers";
 import type { Metadata } from "next";
-import { Inter, Nunito } from "next/font/google";
-
-const nunito = Nunito({
-  variable: "--font-nunito",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800"],
-  display: "swap",
-});
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  display: "swap",
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
-});
 
 export const metadata: Metadata = {
   title: {
@@ -50,13 +35,5 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <html>
-      <body
-        className={`${nunito.variable} ${inter.variable} antialiased text-foreground `}
-      >
-        <Providers>{children}</Providers>
-      </body>
-    </html>
-  );
+  return children;
 }
