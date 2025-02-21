@@ -1,8 +1,4 @@
-const NotFound = () => {
-  return (
-    <div className="h-screen w-screen flex items-center justify-center text-4xl font-bold">
-      Not Found!!
-    </div>
-  );
-};
-export default NotFound;
+// Note that `app/[locale]/[...rest]/page.tsx`
+// is necessary for this page to render.
+
+export {default} from '@/components/global/NotFoundPage';

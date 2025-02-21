@@ -6,7 +6,7 @@ const Footer = () => {
   const t = useTranslations();
 
   return (
-    <div className="relative">
+    <footer className="relative">
       <Container>
         <Separator className="bg-primary/50" />
         <footer className="flex justify-center items-center sm:py-10 py-6 text-muted-foreground text-sm sm:text-base">
@@ -18,7 +18,7 @@ const Footer = () => {
            from-blue-700/20 to-background
             -z-10 opacity-20"
       ></div>
-    </div>
+    </footer>
   );
 };
 export default Footer;

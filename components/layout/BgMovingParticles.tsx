@@ -49,9 +49,9 @@ const BgMovingParticles = () => {
         },
         links: {
           color: "#804de522",
-          distance: 550,
+          distance: 350,
           enable: true,
-          opacity: 0.2,
+          opacity: 0.35,
           width: 1,
         },
         move: {
@@ -60,15 +60,15 @@ const BgMovingParticles = () => {
           outModes: {
             default: OutMode.out,
           },
-          random: true,
-          speed: 2,
+          random: false,
+          speed: 1.2,
           straight: false,
         },
         number: {
           density: {
             enable: true,
           },
-          value: 80,
+          value: 100,
         },
         opacity: {
           value: 0.3,
@@ -77,7 +77,7 @@ const BgMovingParticles = () => {
           type: "circle",
         },
         size: {
-          value: { min: 2, max: 4 },
+          value: { min: 1, max: 4 },
         },
       },
       detectRetina: true,

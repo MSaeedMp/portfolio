@@ -30,6 +30,7 @@ import { MotionBottomToTop } from "@/components/motion/MotionBottomToTop";
 import { MotionLeftToRight } from "@/components/motion/MotionLeftToRight";
 import { links } from "@/util/constants";
 import { MotionRightToLeft } from "@/components/motion/MotionRightToLeft";
+import { useTranslations } from "next-intl";
 import {
   CertificateType,
   ContactType,
@@ -37,9 +38,8 @@ import {
   StatType,
   TechType,
 } from "@/util/types";
-import { useTranslations } from "next-intl";
 
-const HomePage = () => {
+const LocalePage = () => {
   const t = useTranslations();
 
   return (
@@ -159,4 +159,4 @@ const HomePage = () => {
     </main>
   );
 };
-export default HomePage;
+export default LocalePage;

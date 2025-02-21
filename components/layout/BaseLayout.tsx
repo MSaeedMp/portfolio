@@ -34,8 +34,8 @@ export default async function BaseLayout({ children, locale }: Props) {
       <body
         className={`${nunito.variable} ${inter.variable} antialiased text-foreground `}
       >
-        <NextIntlClientProvider messages={messages}>
-          <Providers>
+        <Providers>
+          <NextIntlClientProvider messages={messages}>
             <CertificateModal />
             <BackToTop />
             <div className="fixed inset-0 -z-20">
@@ -44,8 +44,8 @@ export default async function BaseLayout({ children, locale }: Props) {
             <Header />
             {children}
             <Footer />
-          </Providers>
-        </NextIntlClientProvider>
+          </NextIntlClientProvider>
+        </Providers>
       </body>
     </html>
   );

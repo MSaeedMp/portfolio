@@ -1,26 +1,35 @@
 "use client";
 
-import { useParams } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { Button } from "../ui/button";
 import { cn } from "@/lib/utils";
 import { useTransition } from "react";
-import { Locale, usePathname, useRouter } from "@/i18n/routing";
+import { Locale } from "@/i18n/routing";
 import { useLocale } from "next-intl";
 
 const LanguageToggleButton = () => {
-  const pathname = usePathname();
-  const router = useRouter();
-  const params = useParams();
   const locale = useLocale();
-  const [isPending, startTransition] = useTransition();
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
 
-  console.log(locale);
+  const [isPending, startTransition] = useTransition();
 
   const handleToggleLanguage = () => {
     const nextLocale = (locale === "en" ? "de" : "en") as Locale;
+    const currentParams = new URLSearchParams(searchParams.toString());
+    const currentHash = window.location.hash;
+
+    const segments = pathname.split("/").filter(Boolean);
+    segments[0] = nextLocale;
+
+    const newPathname = `/${segments.join("/")}`;
+
     startTransition(() => {
-      // @ts-expect-error -- TypeScript will validate that only known `params`
-      router.replace({ pathname, params }, { locale: nextLocale });
+      router.replace(
+        `${newPathname}?${currentParams.toString()}${currentHash}`
+      );
+      router.refresh();
     });
   };
 
