@@ -9,11 +9,15 @@ import LanguageToggleButton from "./LanguageToggleButton";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { MotionTopToBottom } from "../motion/MotionTopToBottom";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
   const [headerMode, setHeaderMode] = useState<"solid" | "transparent">(
     "transparent"
   );
+  const pathname = usePathname();
+  const label = pathname.startsWith("/en") ? "en" : "de";
+
   useEffect(() => {
     const handleScrollY = () => {
       const currentScrollY = window.scrollY;
@@ -38,13 +42,13 @@ const Header = () => {
       )}
     >
       <Container>
-        <MotionTopToBottom  className="flex items-center justify-between h-full">
+        <MotionTopToBottom className="flex items-center justify-between h-full">
           <div className="flex items-center">
             <Logo />
             <Navigation className="hidden lg:flex lg:items-center" />
           </div>
           <div className="flex items-center sm:gap-6 gap-3">
-            <LanguageToggleButton />
+            <LanguageToggleButton label={label} />
             <ThemeToggleButton />
             <HamburgerMenu className="lg:hidden" />
           </div>

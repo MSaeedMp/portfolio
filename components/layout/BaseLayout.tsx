@@ -29,7 +29,6 @@ const inter = Inter({
 
 export default async function BaseLayout({ children, locale }: Props) {
   const messages = await getMessages();
-
   return (
     <html lang={locale}>
       <body

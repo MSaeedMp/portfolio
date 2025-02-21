@@ -1,19 +1,23 @@
 "use client";
 
-import { usePathname, useRouter } from "next/navigation";
+import { useParams } from "next/navigation";
 import { Button } from "../ui/button";
 import { cn } from "@/lib/utils";
+import { useTransition } from "react";
+import { usePathname, useRouter } from "@/i18n/routing";
 
-const LanguageToggleButton = () => {
+const LanguageToggleButton = ({ label }: { label: string }) => {
   const pathname = usePathname();
   const router = useRouter();
-
-  const currentLocale = pathname.startsWith("/en") ? "en" : "de";
+  const params = useParams();
+  const [isPending, startTransition] = useTransition();
 
   const handleToggleLanguage = () => {
-    const newLocale = currentLocale === "en" ? "de" : "en";
-    const newPathname = pathname.replace(/^\/[a-z]{2}/, `/${newLocale}`);
-    router.push(newPathname, { scroll: false });
+    const nextLocale = label === "en" ? "de" : "en";
+    startTransition(() => {
+      // @ts-expect-error -- TypeScript will validate that only known `params`
+      router.replace({ pathname, params }, { locale: nextLocale });
+    });
   };
 
   return (
@@ -27,7 +31,7 @@ const LanguageToggleButton = () => {
         <span
           className={cn(
             "text-sm text-muted-foreground",
-            currentLocale === "en"
+            label === "en"
               ? "!text-primary font-semibold group-hover:!text-muted-foreground group-hover:font-normal"
               : "group-hover:!text-primary font-semibold"
           )}
@@ -38,7 +42,7 @@ const LanguageToggleButton = () => {
         <span
           className={cn(
             "text-sm text-muted-foreground",
-            currentLocale === "de"
+            label === "de"
               ? "!text-primary font-semibold group-hover:!text-muted-foreground group-hover:font-normal"
               : "group-hover:!text-primary font-semibold"
           )}
