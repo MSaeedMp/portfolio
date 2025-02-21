@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import { Inter, Nunito } from "next/font/google";
 import Providers from "@/components/providers";
 
-
 const nunito = Nunito({
   variable: "--font-nunito",
   subsets: ["latin"],
@@ -46,12 +45,11 @@ export const metadata: Metadata = {
   manifest: "/site.webmanifest",
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
   return (
     <html>
       <body
