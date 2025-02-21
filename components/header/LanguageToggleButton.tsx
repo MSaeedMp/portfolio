@@ -28,6 +28,7 @@ const LanguageToggleButton = () => {
     <Button
       variant="ghost"
       size="icon"
+      disabled={isPending}
       className="hover:bg-transparent hover:scale-110 w-full transition-all duration-200 group"
       onClick={handleToggleLanguage}
     >
