@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Inter, Nunito } from "next/font/google";
 import Providers from "@/components/providers";
 
+
 const nunito = Nunito({
   variable: "--font-nunito",
   subsets: ["latin"],
@@ -50,8 +51,9 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
-    <html lang="en">
+    <html>
       <body
         className={`${nunito.variable} ${inter.variable} antialiased text-foreground `}
       >
