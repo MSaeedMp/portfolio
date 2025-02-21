@@ -20,7 +20,6 @@ export default async function LocaleLayout({
 
   if (!i18n.locales.includes(locale)) {
     console.log("not found");
-
     notFound();
   }
   const messages = await getMessages();

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { Button } from "../ui/button";
 import { cn } from "@/lib/utils";
@@ -6,15 +5,14 @@ import { cn } from "@/lib/utils";
 const LanguageToggleButton = () => {
   const pathname = usePathname();
   const router = useRouter();
-  const [language, setLanguage] = useState(pathname.startsWith("/en") ? "en" : "de");
 
   const handleToggleLanguage = () => {
-    const newLanguage = language === "en" ? "de" : "en";
-    setLanguage(newLanguage);
-    const newPathname = pathname.replace(`/${language}`, `/${newLanguage}`);
-    router.push(newPathname, { scroll: false });
+    const currentLanguage = pathname.startsWith("/en") ? "en" : "de";
+    const newLanguage = currentLanguage === "en" ? "de" : "en";
+    router.push(pathname.replace(`/${currentLanguage}`, `/${newLanguage}`), {
+      scroll: false,
+    });
   };
-
   return (
     <Button
       variant="ghost"
@@ -26,7 +24,9 @@ const LanguageToggleButton = () => {
         <span
           className={cn(
             "text-sm text-muted-foreground",
-            language === "en" ? "!text-primary font-semibold group-hover:!text-muted-foreground group-hover:font-normal" : "group-hover:!text-primary font-semibold"
+            pathname.startsWith("/en")
+              ? "!text-primary font-semibold group-hover:!text-muted-foreground group-hover:font-normal"
+              : "group-hover:!text-primary font-semibold"
           )}
         >
           EN
@@ -35,7 +35,9 @@ const LanguageToggleButton = () => {
         <span
           className={cn(
             "text-sm text-muted-foreground",
-            language === "de" ? "!text-primary font-semibold group-hover:!text-muted-foreground group-hover:font-normal" : "group-hover:!text-primary font-semibold"
+            pathname.startsWith("/de")
+              ? "!text-primary font-semibold group-hover:!text-muted-foreground group-hover:font-normal"
+              : "group-hover:!text-primary font-semibold"
           )}
         >
           DE

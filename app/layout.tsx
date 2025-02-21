@@ -51,7 +51,7 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <body
         className={`${nunito.variable} ${inter.variable} antialiased text-foreground `}
       >
