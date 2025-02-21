@@ -44,20 +44,21 @@ const HamburgerMenu = ({ className }: { className?: string }) => {
             : "opacity-0 invisible w-10 h-10 top-4 right-5"
         )}
       >
-        {/* <BgRadialEffect className="h-[500px] md:h-[400px] left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2" /> */}
-        <BgMicroGrid />
-        <CloseMenuButton onClick={() => setIsMenuVisible(false)} />
-        <div className="flex flex-col gap-9 font-semibold tracking-tight text-2xl justify-center -translate-y-5 text-foreground">
-          {t.raw("navigation").map((nav: NavType) => (
-            <Link
-              onClick={() => setIsMenuVisible(false)}
-              key={nav.id}
-              href={links[nav.id]}
-              className="hover:scale-110 hover:translate-x-5 transition-transform duration-200"
-            >
-              {nav.name}
-            </Link>
-          ))}
+        <div className="w-full h-full bg-gradient-to-br from-sky-700/10 to-purple-700/10 flex justify-center">
+          <BgMicroGrid />
+          <CloseMenuButton onClick={() => setIsMenuVisible(false)} />
+          <div className="flex flex-col gap-8 font-semibold tracking-tight text-xl justify-center -translate-y-3 text-foreground">
+            {t.raw("navigation").map((nav: NavType) => (
+              <Link
+                onClick={() => setIsMenuVisible(false)}
+                key={nav.id}
+                href={links[nav.id]}
+                className="hover:scale-110 hover:translate-x-5 transition-transform duration-200"
+              >
+                {nav.name}
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </div>
