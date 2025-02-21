@@ -1,15 +1,15 @@
 "use client";
 import CloseMenuButton from "./CloseMenuButton";
-import { HiOutlineMenu } from "react-icons/hi";
-import { Button } from "../ui/button";
-import { useEffect, useState } from "react";
-import { cn } from "@/lib/utils";
-import { links } from "@/util/constants";
 import Link from "next/link";
 import BgRadialEffect from "../layout/BgRadialEffect";
 import BgMicroGrid from "../layout/BgMicroGrid";
 import { useTranslations } from "next-intl";
 import { NavType } from "@/util/types";
+import { HiOutlineMenu } from "react-icons/hi";
+import { Button } from "../ui/button";
+import { useEffect, useState } from "react";
+import { cn } from "@/lib/utils";
+import { links } from "@/util/constants";
 
 const HamburgerMenu = ({ className }: { className?: string }) => {
   const t = useTranslations();
@@ -44,7 +44,7 @@ const HamburgerMenu = ({ className }: { className?: string }) => {
             : "opacity-0 invisible w-10 h-10 top-4 right-5"
         )}
       >
-        <BgRadialEffect className="h-[500px] md:h-[400px] left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2" />
+        {/* <BgRadialEffect className="h-[500px] md:h-[400px] left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2" /> */}
         <BgMicroGrid />
         <CloseMenuButton onClick={() => setIsMenuVisible(false)} />
         <div className="flex flex-col gap-9 font-semibold tracking-tight text-2xl justify-center -translate-y-5 text-foreground">

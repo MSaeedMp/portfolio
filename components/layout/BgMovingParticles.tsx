@@ -88,7 +88,7 @@ const BgMovingParticles = () => {
   if (init) {
     return (
       <div className="fixed inset-0 -z-20">
-        <Particles id="tsparticles" options={options} />{" "}
+        <Particles id="tsparticles" options={options} />
       </div>
     );
   }
