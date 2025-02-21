@@ -7,7 +7,7 @@ import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
 import { i18n } from "@/i18n";
 import { getMessages } from "next-intl/server";
-import BgMovingParticles from "@/components/layout/BgMovingParticles";
+// import BgMovingParticles from "@/components/layout/BgMovingParticles";
 
 export default async function LocaleLayout({
   children,
