@@ -315,7 +315,7 @@
     "certificates": [
       {
         "id": "tfCertificate",
-        "title": "TensorFlow Developer Zertifikate",
+        "title": "TensorFlow Developer Zertifikat",
         "subtitle": "Zertifizierung in Deep Learning und Maschinellem Lernen",
         "description": "Verliehen nach Bestehen einer fünfstündigen Online-Programmierprüfung, die die Kompetenz in TensorFlow testet, einschließlich der Fähigkeit, neuronale Netze für Computer Vision, NLP und Zeitreihenprognosen zu erstellen und zu trainieren.",
         "awardedBy": "TensorFlow, Google",
