@@ -4,20 +4,20 @@ import { useParams } from "next/navigation";
 import { Button } from "../ui/button";
 import { cn } from "@/lib/utils";
 import { useTransition } from "react";
-import { usePathname, useRouter } from "@/i18n/routing";
+import { Locale, usePathname, useRouter } from "@/i18n/routing";
 import { useLocale } from "next-intl";
 
 const LanguageToggleButton = () => {
   const pathname = usePathname();
   const router = useRouter();
   const params = useParams();
-  const [isPending, startTransition] = useTransition();
   const locale = useLocale();
+  const [isPending, startTransition] = useTransition();
 
   console.log(locale);
 
   const handleToggleLanguage = () => {
-    const nextLocale = locale === "en" ? "de" : "en";
+    const nextLocale = (locale === "en" ? "de" : "en") as Locale;
     startTransition(() => {
       // @ts-expect-error -- TypeScript will validate that only known `params`
       router.replace({ pathname, params }, { locale: nextLocale });
