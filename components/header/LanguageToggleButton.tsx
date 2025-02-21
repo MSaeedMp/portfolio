@@ -1,3 +1,5 @@
+"use client";
+
 import { usePathname, useRouter } from "next/navigation";
 import { Button } from "../ui/button";
 import { cn } from "@/lib/utils";
@@ -6,13 +8,14 @@ const LanguageToggleButton = () => {
   const pathname = usePathname();
   const router = useRouter();
 
+  const currentLocale = pathname.startsWith("/en") ? "en" : "de";
+
   const handleToggleLanguage = () => {
-    const currentLanguage = pathname.startsWith("/en") ? "en" : "de";
-    const newLanguage = currentLanguage === "en" ? "de" : "en";
-    router.push(pathname.replace(`/${currentLanguage}`, `/${newLanguage}`), {
-      scroll: false,
-    });
+    const newLocale = currentLocale === "en" ? "de" : "en";
+    const newPathname = pathname.replace(/^\/[a-z]{2}/, `/${newLocale}`);
+    router.push(newPathname, { scroll: false });
   };
+
   return (
     <Button
       variant="ghost"
@@ -24,7 +27,7 @@ const LanguageToggleButton = () => {
         <span
           className={cn(
             "text-sm text-muted-foreground",
-            pathname.startsWith("/en")
+            currentLocale === "en"
               ? "!text-primary font-semibold group-hover:!text-muted-foreground group-hover:font-normal"
               : "group-hover:!text-primary font-semibold"
           )}
@@ -35,7 +38,7 @@ const LanguageToggleButton = () => {
         <span
           className={cn(
             "text-sm text-muted-foreground",
-            pathname.startsWith("/de")
+            currentLocale === "de"
               ? "!text-primary font-semibold group-hover:!text-muted-foreground group-hover:font-normal"
               : "group-hover:!text-primary font-semibold"
           )}
