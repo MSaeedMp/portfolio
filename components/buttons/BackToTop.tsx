@@ -25,7 +25,7 @@ const BackToTop = () => {
     <Link href={links["home"]}>
       <GradientWrapper
         className={cn(
-          "opacity-0 invisible p-1 rounded-full fixed bottom-5 right-5 hover:cursor-pointer z-50 flex items-center transition-opacity animate-pulse hover:animate-none",
+          "opacity-0 invisible p-1 rounded-full fixed bottom-16 right-5 hover:cursor-pointer z-50 flex items-center transition-opacity animate-pulse hover:animate-none",
           isButtonVisible && "opacity-100 visible"
         )}
       >

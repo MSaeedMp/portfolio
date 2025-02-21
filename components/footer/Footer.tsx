@@ -6,12 +6,12 @@ const Footer = () => {
   const t = useTranslations();
 
   return (
-    <footer className="relative">
-      <Container>
+    <footer className="relative h-14 md:h-20">
+      <Container className="h-full">
         <Separator className="bg-primary/50" />
-        <footer className="flex justify-center items-center sm:py-10 py-6 text-muted-foreground text-sm sm:text-base">
+        <p className="flex justify-center items-center text-muted-foreground text-sm sm:text-base h-full">
           {t("footer")}
-        </footer>
+        </p>
       </Container>
       <div
         className="absolute inset-0 bg-gradient-to-b

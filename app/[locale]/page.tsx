@@ -8,7 +8,7 @@ import CertificateCard from "@/components/certificate/CertificateCard";
 import Contact from "@/components/contact/Contact";
 import ContactButton from "@/components/contact/ContactButton";
 import MarkedText from "@/components/global/MarkedText";
-import Section from "@/components/global/Section";
+import Section from "@/components/home/Section";
 import Hero from "@/components/hero/Hero";
 import HeroIntro from "@/components/hero/HeroIntro";
 import HeroMainHeading from "@/components/hero/HeroMainHeading";
