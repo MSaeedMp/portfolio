@@ -44,7 +44,7 @@ const HamburgerMenu = ({ className }: { className?: string }) => {
             : "opacity-0 invisible w-10 h-10 top-4 right-5"
         )}
       >
-        <div className="w-full h-full bg-gradient-to-br from-sky-700/10 to-purple-700/10 flex justify-center">
+        <div className="w-full h-full bg-gradient-to-br from-blue-800/20 to-indigo-800/20 flex justify-center">
           <BgMicroGrid />
           <CloseMenuButton onClick={() => setIsMenuVisible(false)} />
           <div className="flex flex-col gap-8 font-semibold tracking-tight text-xl justify-center -translate-y-3 text-foreground">
