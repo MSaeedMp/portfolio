@@ -31,6 +31,10 @@
       "name": "Google Scholar"
     },
     {
+      "id": "orcid",
+      "name": "Orcid"
+    },
+    {
       "id": "github",
       "name": "Github"
     },
@@ -356,6 +360,7 @@
     "vercel": "Live Demo",
     "github": "Source Code",
     "paper": "Research paper",
-    "googleScholar": "Full list of papers"
+    "googleScholar": "Full list of papers",
+    "downloadCv": "Download Resume"
   }
 }

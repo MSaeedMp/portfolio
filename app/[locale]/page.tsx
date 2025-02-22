@@ -38,6 +38,8 @@ import {
   StatType,
   TechType,
 } from "@/util/types";
+import DownloadButton from "@/components/buttons/DownloadButton";
+import ContactMeButton from "@/components/buttons/ContactMeButton";
 
 const LocalePage = () => {
   const t = useTranslations();
@@ -51,10 +53,14 @@ const LocalePage = () => {
               <HeroMainHeading heading={t("hero.heading")} />
               <HeroSubHeading heading={t("hero.subHeading")} />
               <SocialMediaLinks />
-              <PrimaryButton
-                className="md:self-start"
-                label={t("buttons.contactMe")}
-              />
+              <div className="flex flex-col gap-2 lg:gap-4 lg:flex-row lg:items-center  mt-4">
+                <DownloadButton
+                  download="Mafipour_CV"
+                  link="/Mafipour_CV.pdf"
+                  label={t("buttons.downloadCv")}
+                />
+                <ContactMeButton />
+              </div>
             </MotionLeftToRight>
           </HeroIntro>
           <HeroProfile className="row-start-1 md:row-start-1">

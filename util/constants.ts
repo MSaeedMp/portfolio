@@ -3,6 +3,7 @@ import {
   FaGoogleScholar,
   FaLinkedin,
   FaEnvelope,
+  FaOrcid
 } from "react-icons/fa6";
 import {
   GraduationCap,
@@ -27,6 +28,7 @@ export const icons: { [key: string]: IconType } = {
   linkedIn: FaLinkedin,
   github: FaGithub,
   vercel: TbWorld,
+  orcid: FaOrcid,
   paper: IoNewspaperOutline,
   googleScholar: FaGoogleScholar,
 };
@@ -35,6 +37,7 @@ export const links: { [key: string]: string | { [key: string]: string } } = {
   email: "saeed.mafipour@gmail.com",
   googleScholar:
     "https://scholar.google.com/citations?hl=en&user=ZueFqBkAAAAJ&view_op=list_works",
+  orcid: "https://orcid.org/0000-0002-2076-8653",
   github: "https://github.com/MSaeedMp",
   linkedIn: "https://www.linkedin.com/in/m-saeed-mafipour/",
   tfCertificate:

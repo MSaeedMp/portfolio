@@ -10,7 +10,7 @@ import { SocialMediaType } from "@/util/types";
 const SocialMediaLinks = () => {
   const t = useTranslations();
   const linkStyle =
-    "hover:scale-110 inline-block transition-transform duration-200 p-3";
+    "hover:scale-110 inline-block transition-transform duration-200 p-3 hover:text-primary";
   const iconStyle = "w-8 h-8";
 
   return (

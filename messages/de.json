@@ -31,6 +31,10 @@
       "name": "Google Scholar"
     },
     {
+      "id": "orcid",
+      "name": "OrciD"
+    },
+    {
       "id": "github",
       "name": "Github"
     },
@@ -356,6 +360,7 @@
     "vercel": "Live-Demo",
     "github": "Quellcode",
     "paper": "Forschungsarbeit",
-    "googleScholar": "Alle Veröffentlichungen"
+    "googleScholar": "Alle Veröffentlichungen",
+    "downloadCv": "Lebenslauf herunterladen"
   }
 }
