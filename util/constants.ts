@@ -47,15 +47,15 @@ export const links: { [key: string]: string | { [key: string]: string } } = {
     vercel: "https://next-cabin-app.vercel.app/",
   },
   nextRobot: {
-    github: "",
+    github: "https://github.com/MSaeedMp/next-robot-app",
     vercel: "https://next-robot-app.vercel.app/",
   },
   nextStore: {
-    github: "",
+    github: "https://github.com/MSaeedMp/next-store-app",
     vercel: "https://next-store-app-pi.vercel.app/",
   },
   nextChat: {
-    github: "",
+    github: "https://github.com/MSaeedMp/next-chat-app",
     vercel: "https://next-chat-app-umber.vercel.app/",
   },
   msfdNet: {
