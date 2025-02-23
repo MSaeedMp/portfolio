@@ -43,7 +43,7 @@ export const links: { [key: string]: string | { [key: string]: string } } = {
   tfCertificate:
     "https://www.credential.net/c6f7c1c8-f2f6-48de-ad17-2f9e9ad7092b#acc.8gVYQGBR",
   nextCabin: {
-    github: "",
+    github: "https://github.com/MSaeedMp/next-cabin-app",
     vercel: "https://next-cabin-app.vercel.app/",
   },
   nextRobot: {
