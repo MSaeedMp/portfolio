@@ -3,7 +3,7 @@
 This is a personal portfolio website built with Next.js, showcasing my work, skills, and experience as a full-stack developer.
 
 ## Live Demo  
-[View Portfolio](https://portfolio-beta-roan-69.vercel.app/de)
+[View Portfolio](https://portfolio-beta-roan-69.vercel.app/en)
 
 ## Features  
 
