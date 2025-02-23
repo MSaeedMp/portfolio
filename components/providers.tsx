@@ -1,5 +1,4 @@
 "use client";
-
 import { ThemeProvider } from "@/components/theme-provider";
 import { TooltipProvider } from "./ui/tooltip";
 import { ModalProvider } from "@/context/CertificateModalContext";
