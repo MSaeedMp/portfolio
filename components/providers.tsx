@@ -10,7 +10,7 @@ const Providers = ({ children }: { children: React.ReactNode }) => {
       <ModalProvider>
         <ThemeProvider
           attribute="class"
-          defaultTheme="light"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
