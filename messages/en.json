@@ -276,6 +276,7 @@
         "description": "A reasearch project conducted at TUM to develop a plugin for Autodesk Revit to generate the 3D model of bridges from their point clouds.",
         "technologies": [
           "AI",
+          ".NET",
           "C#",
           "C++",
           "Optimization",
