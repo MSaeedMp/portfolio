@@ -30,7 +30,7 @@ import { MotionBottomToTop } from "@/components/motion/MotionBottomToTop";
 import { MotionLeftToRight } from "@/components/motion/MotionLeftToRight";
 import { links } from "@/util/constants";
 import { MotionRightToLeft } from "@/components/motion/MotionRightToLeft";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import {
   CertificateType,
   ContactType,
@@ -43,6 +43,7 @@ import ContactMeButton from "@/components/buttons/ContactMeButton";
 
 const LocalePage = () => {
   const t = useTranslations();
+  const locale = useLocale();
 
   return (
     <main>
@@ -55,7 +56,11 @@ const LocalePage = () => {
               <SocialMediaLinks />
               <div className="flex flex-col gap-2 lg:gap-4 lg:flex-row lg:items-center  mt-4">
                 <DownloadButton
-                  download="Mafipour_CV"
+                  download={
+                    locale === "de"
+                      ? "Mafipour_Fullstack_de"
+                      : "Mafipour_Fullstack_en"
+                  }
                   link="/Mafipour_CV.pdf"
                   label={t("buttons.downloadCv")}
                 />
