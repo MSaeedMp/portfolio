@@ -61,7 +61,11 @@ const LocalePage = () => {
                       ? "Mafipour_Fullstack_de"
                       : "Mafipour_Fullstack_en"
                   }
-                  link="/Mafipour_CV.pdf"
+                  link={
+                    locale === "de"
+                      ? "Mafipour_Fullstack_de.pdf"
+                      : "Mafipour_Fullstack_en.pdf"
+                  }
                   label={t("buttons.downloadCv")}
                 />
                 <ContactMeButton />
