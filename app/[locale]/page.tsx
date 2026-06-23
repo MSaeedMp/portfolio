@@ -2,7 +2,6 @@
 
 import About from "@/components/about/About";
 import TechCard from "@/components/about/TechCard";
-import PrimaryButton from "@/components/buttons/PrimaryButton";
 import Certificate from "@/components/certificate/Certificate";
 import CertificateCard from "@/components/certificate/CertificateCard";
 import Contact from "@/components/contact/Contact";
@@ -40,6 +39,7 @@ import {
 } from "@/util/types";
 import DownloadButton from "@/components/buttons/DownloadButton";
 import ContactMeButton from "@/components/buttons/ContactMeButton";
+import { showProjects } from "@/util/featureFlags";
 
 const LocalePage = () => {
   const t = useTranslations();
@@ -97,21 +97,25 @@ const LocalePage = () => {
         </About>
       </Section>
 
-      <Section id="projects">
-        <Project>
-          <MotionBottomToTop>
-            <SectionHeading>
-              <SectionMainHeading heading={t("projectsSection.heading")} />
-              <SectionSubHeading heading={t("projectsSection.subHeading")} />
-            </SectionHeading>
-          </MotionBottomToTop>
-          <MoTionListBottomToTop className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-20">
-            {t.raw("projectsSection.projects")?.map((project: ProjectType) => (
-              <ProjectCard key={project.title} project={project} />
-            ))}
-          </MoTionListBottomToTop>
-        </Project>
-      </Section>
+      {showProjects && (
+        <Section id="projects">
+          <Project>
+            <MotionBottomToTop>
+              <SectionHeading>
+                <SectionMainHeading heading={t("projectsSection.heading")} />
+                <SectionSubHeading heading={t("projectsSection.subHeading")} />
+              </SectionHeading>
+            </MotionBottomToTop>
+            <MoTionListBottomToTop className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-20">
+              {t
+                .raw("projectsSection.projects")
+                ?.map((project: ProjectType) => (
+                  <ProjectCard key={project.title} project={project} />
+                ))}
+            </MoTionListBottomToTop>
+          </Project>
+        </Section>
+      )}
 
       <Section id="research">
         <Research>

@@ -10,6 +10,7 @@ import { Button } from "../ui/button";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { links } from "@/util/constants";
+import { showProjects } from "@/util/featureFlags";
 
 const HamburgerMenu = ({ className }: { className?: string }) => {
   const t = useTranslations();
@@ -48,16 +49,19 @@ const HamburgerMenu = ({ className }: { className?: string }) => {
           <BgMicroGrid />
           <CloseMenuButton onClick={() => setIsMenuVisible(false)} />
           <div className="flex flex-col gap-8 font-semibold tracking-tight text-xl justify-center -translate-y-3 text-foreground">
-            {t.raw("navigation").map((nav: NavType) => (
-              <Link
-                onClick={() => setIsMenuVisible(false)}
-                key={nav.id}
-                href={links[nav.id]}
-                className="hover:scale-110 hover:translate-x-5 transition-transform duration-200"
-              >
-                {nav.name}
-              </Link>
-            ))}
+            {t
+              .raw("navigation")
+              .filter((nav: NavType) => showProjects || nav.id !== "projects")
+              .map((nav: NavType) => (
+                <Link
+                  onClick={() => setIsMenuVisible(false)}
+                  key={nav.id}
+                  href={links[nav.id]}
+                  className="hover:scale-110 hover:translate-x-5 transition-transform duration-200"
+                >
+                  {nav.name}
+                </Link>
+              ))}
           </div>
         </div>
       </div>
