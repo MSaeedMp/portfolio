@@ -1,7 +1,6 @@
 "use client";
 import CloseMenuButton from "./CloseMenuButton";
 import Link from "next/link";
-import BgRadialEffect from "../layout/BgRadialEffect";
 import BgMicroGrid from "../layout/BgMicroGrid";
 import { useTranslations } from "next-intl";
 import { NavType } from "@/util/types";

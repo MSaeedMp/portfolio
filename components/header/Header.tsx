@@ -9,7 +9,6 @@ import LanguageToggleButton from "./LanguageToggleButton";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { MotionTopToBottom } from "../motion/MotionTopToBottom";
-import { usePathname } from "next/navigation";
 
 const Header = () => {
   const [headerMode, setHeaderMode] = useState<"solid" | "transparent">(
